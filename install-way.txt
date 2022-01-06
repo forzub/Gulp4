@@ -1,0 +1,78 @@
+https://www.youtube.com/watch?v=jU88mLuLWlk
+npm i $PLUGIN-NAME$ --save-dev
+
+npm i gulp -global
+npm init --yes
+npm i gulp --save-dev
+npm i require-dir --save-dev
+npm i gulp-plumber --save-dev
+npm i chalk --save-dev
+npm i --save-dev gulp-load-plugins
+npm i -D del
+
+--------------------------------- package.json -------------------------
+"name": "sborka2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type":"module",  <-----------
+
+--------------------------------- папки ---------------------------------
+src
+gulp -> {
+    config -> path.js, plugins.js, ftp.js,
+    task -> [файл_задач].js,
+}
+
+--------------------------------- структура ------------------------------
+модульная структура, в модулях:
+
+export const functionName = () => {
+    return ...
+}
+
+export const path = {}
+
+---------
+в главном файле gulpfile.js:
+
+import { path } from './gulp/config/path.js';
+import { task } from './gulp/tasks/task.js';
+
+
+const dev = gulp.series(task1, task2, ..., taskn);
+gulp.task('default', dev);
+
+--------------------------------- HTML --------------------------------------
+vsCode установить Path Autocomplete
+F1 -> Open Settings JSON
++
+"path-autocomplete.pathMappings" : {
+    "@img" : "${folder}/src/img",
+    "@scss" : "${folder}/src/scss",
+    "@js" : "${folder}/src/js",
+}
+
+
+npm i gulp-file-include --save-dev
+npm i gulp-replace --save-dev
+npm i -D gulp-webp-html-nosvg   (добавляет обверку вокруг img)
+npm i -D gulp-version-number   (контроль версий css?v=0, js?v=0 файлов)
+npm i gulp-htmlmin --save-dev
+
+
+
+
+
+--------------------------------- PUG -----------------------------------
+npm i gulp-pug --save-dev
+
+
+
+--------------------------------- browser-sync --------------------------
+npm i browser-sync --save-dev
+
+
+npm i gulp -global
+npm init --yes
+npm i --save-dev gulp require-dir gulp-plumber chalk browser-sync gulp-load-plugins
