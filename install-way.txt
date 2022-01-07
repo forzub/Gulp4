@@ -5,9 +5,8 @@ npm i gulp -global
 npm init --yes
 npm i gulp --save-dev
 npm i require-dir --save-dev
-npm i gulp-plumber --save-dev
+
 npm i chalk --save-dev
-npm i --save-dev gulp-load-plugins
 npm i -D del
 
 --------------------------------- package.json -------------------------
@@ -36,12 +35,12 @@ export const path = {}
 ---------
 в главном файле gulpfile.js:
 
-import { path } from './gulp/config/path.js';
-import { task } from './gulp/tasks/task.js';
+import { path } from "./gulp/config/path.js";
+import { task } from "./gulp/tasks/task.js";
 
 
 const dev = gulp.series(task1, task2, ..., taskn);
-gulp.task('default', dev);
+gulp.task("default", dev);
 
 --------------------------------- HTML --------------------------------------
 vsCode установить Path Autocomplete
@@ -58,19 +57,69 @@ npm i gulp-file-include --save-dev
 npm i gulp-replace --save-dev
 npm i -D gulp-webp-html-nosvg   (добавляет обверку вокруг img)
 npm i -D gulp-version-number   (контроль версий css?v=0, js?v=0 файлов)
-npm i gulp-htmlmin --save-dev
-
-
-
-
+npm i gulp-htmlmin --save-dev  
+npm i gulp-plumber --save-dev   (обработка ошибок)
+npm i gulp-notify --save-dev    (сообщения)
 
 --------------------------------- PUG -----------------------------------
 npm i gulp-pug --save-dev
 
-
-
 --------------------------------- browser-sync --------------------------
 npm i browser-sync --save-dev
+
+--------------------------------- SCSS  ---------------------------------
+npm i -D sass gulp-sass
+npm i -D gulp-rename
+npm i -D gulp-clean-css     // сжатие css файла
+npm i -D gulp-webpcss       // вывод webp изображений
+npm i -D gulp-autoprefixer  // кросбраузерность
+npm i -D gulp-group-css-media-queries  // группировка медиазапросов
+npm i -D webp-converter@2.2.3
+
+--------------------------------- JS  ---------------------------------
+npm i -D webpack
+npm i -D webpack-stream
+npm i -D swiper  //  слайдер
+
+--------------------------------- IMG  ---------------------------------
+npm i -D gulp-webp
+npm i -D gulp-imagemin
+npm i -D gulp-newer
+
+--------------------------------- FONTS  -------------------------------
+npm i -D gulp-fonter
+npm i -D gulp-ttf2woff2
+
+--------------------------------- SVGSPRITE ----------------------------
+npm i -D gulp-svg-sprite
+
+открыть package.json
+ветка "scripts"
+"svgSprite" : "gulp svgSprite"
+"dev" : "gulp"
+
+запуск командой "npm run svgSprite"
+запуск командой "npm run dev"
+
+--------------------------------- Продакшен ----------------------------
+npm i -D gulp-if
+npm i -D gulp-zip
+
+открыть package.json
+ветка "scripts"
+"build" : "gulp build --build"
+"zip": "gulp deployZip --build",
+
+
+--------------------------------- FTP ----------------------------------
+npm i -D gulp-util
+npm i -D vinyl-ftp
+
+открыть package.json
+ветка "scripts"
+"ftp": "gulp deployFTP --build",
+
+
 
 
 npm i gulp -global
