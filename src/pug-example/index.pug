@@ -1,0 +1,28 @@
+extends ./common/base
+
+include ./mixin/svg
+include ./mixin/link
+include ./mixin/article
+
+block content
+    - var title = "On Dogs: Man's Best Friend";
+    - var author = "enlore";
+    - var theGreat = "<span>escape!</span>";
+
+    include ./common/header
+    h1= title
+    .block.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Eius eaque aut, impedit perspiciatis voluptate qui sapiente mollitia commodi. 
+        Nihil molestias, porro a eveniet sapiente aliquid labore sed cumque libero suscipit.
+    p Written with love by #{author}
+    p This will be safe: !{theGreat}
+    p 
+     +svg('icon-1')
+    p 
+     +link('/foo', 'foo')(class="btn")
+    +article('Hello world') 
+    
+    +article('Hello world') 
+        p This is my
+        p Amazing article

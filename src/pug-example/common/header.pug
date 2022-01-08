@@ -1,0 +1,19 @@
+- var text = 'это текст';
+- var menuValues = ['Главная', 'О нас', 'Работы', 'Контакты'];
+- var menuObj = {'Главная' : 'home', 'О компании' : 'about', 'Услуги' : 'services', 'Каталог' : 'catalog', 'Контакты' : 'contact'}; 
+
+header.header
+    if text 
+        p #{text}
+    else
+        p это Ходар
+    nav.nav 
+        ul 
+            each key in menuValues
+                li 
+                    a(href="#")= key
+    nav.nav 
+        ul 
+            each value, index in menuObj
+                li 
+                    a(href= "/" + value + ".html")= index

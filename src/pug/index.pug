@@ -1,14 +1,6 @@
-html 
-    head
-        link(rel="stylesheet",href='css/style.min.css')
-        
-    body 
-        include common/header
-        main.page 
-            h1 Привед Медвед --!
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facere magnam, sapiente modi, non saepe incidunt voluptatum id praesentium voluptates eligendi soluta debitis neque sed dicta minima labore ab voluptatem.
-            img(src="@img/typa.jpg")
-        include common/footer
-        script(src='js/app.min.js')
-        
-        
+extends ./common/base
+block vars 
+    - var siteTitle = 'main';
+
+block content
+    
