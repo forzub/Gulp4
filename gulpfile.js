@@ -37,13 +37,18 @@ function watcher() {
 
 
 // const fonts = gulp.series(otf2ttf, ttf2woff, fontsStyle);
-// const mainTask = gulp.series(fonts, gulp.parallel(copy, html, pug, scss, js, images));
-const mainTask = gulp.series(gulp.parallel(copy, html, pug, scss, js, images));
+// const mainTask = gulp.series(gulp.parallel(copy, html, pug, scss, js, images));
+// 
+
+
+const fonts = gulp.series(otf2ttf, ttf2woff);
+const mainTask = gulp.series(fonts, gulp.parallel(copy, html, pug, scss, js, images));
+
 
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTask);
-const deployZip = gulp.series(reset, mainTask,zip);
-const deployFTP = gulp.series(reset, mainTask,ftp);
+const deployZip = gulp.series(reset, mainTask, zip);
+const deployFTP = gulp.series(reset, mainTask, ftp);
 
 export { svgSprite }
 export { dev }
