@@ -75,6 +75,11 @@ npm i -D gulp-webpcss       // вывод webp изображений
 npm i -D gulp-autoprefixer  // кросбраузерность
 npm i -D gulp-group-css-media-queries  // группировка медиазапросов
 npm i -D webp-converter@2.2.3
+npm i -D normalize.css
+npm i -D gulp-sass-bulk-importer
+npm i -D  gulp-concat
+npm i -D gulp-sourcemaps
+
 
 --------------------------------- JS  ---------------------------------
 npm i -D webpack

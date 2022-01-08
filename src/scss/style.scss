@@ -1,9 +1,9 @@
-@import 'fonts'; 
-body{
-    background: url(@img/typa.jpg) no-repeat center;
-    h1{ 
-        color: aqua;
-    }
-    p{color:aqua}
-}
+@import "./normalize/*";
 
+*{ box-sizing: border-box;}
+
+body{
+    margin: 0;
+       // background: url(@img/typa.jpg) no-repeat center;
+}
+ 

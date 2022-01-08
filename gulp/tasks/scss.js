@@ -7,16 +7,26 @@ import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
 import groupCssMediaQueries from 'gulp-group-css-media-queries';
 
+import map from 'gulp-sourcemaps';
+import bulk from 'gulp-sass-bulk-importer';
+import concat from 'gulp-concat';
+
 
 
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-    return app.gulp.src(app.path.src.scss, { sourcemaps: app.siDev })
+    return app.gulp.src(app.path.src.scss, {})
+        .pipe(map.init())
+
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({ title: "SCSS", message: 'Error: <%= error.message %>' })
         ))
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
+
+
+        .pipe(bulk())
+
         .pipe(sass({
             outputStyle: 'expanded'
         }))
@@ -52,7 +62,10 @@ export const scss = () => {
                 cleanCss()
             )
         )
-        .pipe(rename({ extname: '.min.css' }))
+        //.pipe(rename({ extname: '.min.css' }))
+
+        .pipe(concat('style.min.css'))
+        .pipe(map.write('../sourcemaps/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browsersync.stream());
 }
