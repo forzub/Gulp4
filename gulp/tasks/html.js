@@ -16,7 +16,7 @@ export const html = () => {
             'append': {
                 'key': 'v',
                 'cover': 0,
-                'to': ['css', 'js',]
+                'to': ['css', 'js',]               
             },
             'output': {
                 'file': 'gulp/version.json'

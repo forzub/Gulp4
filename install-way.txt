@@ -124,7 +124,8 @@ npm i -D vinyl-ftp
 ветка "scripts"
 "ftp": "gulp deployFTP --build",
 
-
+--------------------------------- bootstrap -----------------------------
+npm install bootstrap
 
 
 npm i gulp -global

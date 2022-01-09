@@ -22,7 +22,7 @@
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
-    "gulp-concat": "^2.6.1",
+    "gulp-concat": "lastest",
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",
     "gulp-group-css-media-queries": "latest",
@@ -54,5 +54,8 @@
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
