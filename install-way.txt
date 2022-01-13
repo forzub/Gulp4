@@ -42,6 +42,7 @@ import { task } from "./gulp/tasks/task.js";
 const dev = gulp.series(task1, task2, ..., taskn);
 gulp.task("default", dev);
 
+-----------------------------------------------------------------------------
 --------------------------------- HTML --------------------------------------
 vsCode установить Path Autocomplete
 F1 -> Open Settings JSON
@@ -61,6 +62,7 @@ npm i gulp-htmlmin --save-dev
 npm i gulp-plumber --save-dev   (обработка ошибок)
 npm i gulp-notify --save-dev    (сообщения)
 
+
 --------------------------------- PUG -----------------------------------
 npm i gulp-pug --save-dev
 
@@ -79,7 +81,6 @@ npm i -D normalize.css
 npm i -D gulp-sass-bulk-importer
 npm i -D  gulp-concat
 npm i -D gulp-sourcemaps
-
 
 --------------------------------- JS  ---------------------------------
 npm i -D webpack

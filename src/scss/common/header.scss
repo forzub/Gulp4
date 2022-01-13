@@ -1,5 +1,9 @@
 .header{
 
+    position: relative;
+    z-index: 10;
+
+
     nav.head-nav {
         padding-left: 16.66%;
     }
@@ -13,7 +17,9 @@
         display: flex;
     }
 
-    li.head-nav-li+li.head-nav-li{border-left: 1px solid black;}
+    li.head-nav-li+li.head-nav-li{
+        border-left: 1px solid black;
+    }
 
     a.head-nav-link{
         text-decoration: none;
@@ -23,7 +29,7 @@
     .head-info{display: flex;}
 
     .head-logo{
-        flex: 0 0 16.66%
+        flex: 0 0 250px;
     }
     .head-logo-link img{max-width: 100%;}
 
@@ -34,7 +40,7 @@
 
 
     .head-ti{
-        flex:0 0 66%;
+        flex:1 0 auto;
         
     }
     .head-ti-tx,.head-ps{
@@ -44,12 +50,17 @@
     }
 
     .head-contact{
-        flex: 0 0 16.66%;
+        flex: 0 0 230px;
+    }
+
+    .head-con-phone{
+        margin-bottom: 15px;
     }
 
     a.head-con-phone-link {
         display: flex;
         color:black;
+        margin-bottom: 5px;
     }
 
     .head-con-bt-bx {
@@ -61,44 +72,79 @@
     }
 
 
+    @media screen and (min-width: 1200px){
+    }
+
+// ------------------------------------------------------------------------------    
     
+.head-cat-nav  {
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+} 
     
-    
-    
-    .hcat-nav{display: flex;}
-    .hcat-ti {
+    .hcat-nav{
         display: flex;
-        flex: 0 0 25%;
+        flex: 1 0 auto;
+    }
+    .hcat-ti {
+        position: relative;
+        display: flex;
+        flex: 0 0 250px;
+        min-width: 250px;
         padding: 10px 20px;
         background: cornflowerblue;
         color: #fff;
+
+        @media screen and (min-width: 1200px){
+            flex: 0 0 29%;
+        }
     }
     
-    nav.hcat-nav-bx {
-        display: flex;
-        align-items: center;
-    }
-
     .hcat-ul{
-        display: flex;
+        display: block;
+        position: absolute;
+        width: 250px;
+        background: #fff;
+        border: 1px solid grey;
+        top: 100%;
+        padding: 10px 10px 20px 10px;
+
+        @media screen and (min-width: 1200px){
+            display: flex;
+            position: static; 
+            width: auto;
+            border:none;
+            background: none;
+            padding: 0;
+        }
     }
 
     li.hcat-nav-li {
         padding: 5px 15px;
+        display: flex;
+        align-items: center;
     }
-    li.hcat-nav-li+li.hcat-nav-li{border-left: 1px solid #000;}
+
+    li.hcat-nav-li+li.hcat-nav-li{
+       
+        @media screen and (min-width: 1200px){
+            border-left: 1px solid #000;
+        }
+    }
 
     a.hcat-nav-link{color: #000;}
 
     .hcat-switch-bx{
-        flex: 0 0 16.66%;
+        width: 100%;
+        height: 100%;
         position: relative;
     }
 
     .switch{ 
         position: absolute;
         right: 0;
-        top: 0;
+        top: 6px;
     }
     .hcat-switch-tx{
         position: absolute;

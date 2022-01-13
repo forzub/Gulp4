@@ -52,8 +52,8 @@ let scroll_list = function(){
 scroll_list();
 
 
-new Swiper('#main-slider', {});
-new Swiper('.card-slider', {
+const main_sect_slider = new Swiper('#main-slider', {});
+const card_small_slider = new Swiper('.card-slider', {
     spaceBetween: 30,
     watchOverflow: true,
     nested: true,

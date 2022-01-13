@@ -24,15 +24,14 @@ header.header
                 .head-con-bt-bx 
                     buttom(type='button') Связаться с директором
 
-        .head-cat-nav.row 
-            .col-md-10.hcat-nav
+        .head-cat-nav 
+            nav.hcat-nav
                 .hcat-ti Каталог оборудования
-                nav.hcat-nav-bx
-                    ul.hcat-ul
-                        each itm in ['Лыжи', 'Коньки', 'Санки', 'Пленки', 'Газеты', 'Школьники']
-                            li.hcat-nav-li  
-                                a.hcat-nav-link(href='#') #{itm} 
-            .col-md-2.hcat-switch 
+                ul.hcat-ul
+                    each itm in ['Лыжи', 'Коньки', 'Санки', 'Пленки', 'Газеты', 'Школьники']
+                        li.hcat-nav-li  
+                            a.hcat-nav-link(href='#') #{itm} 
+            .hcat-switch 
                 .hcat-switch-bx 
                     label.switch
                         input(type="checkbox")

@@ -10,6 +10,7 @@ import groupCssMediaQueries from 'gulp-group-css-media-queries';
 import map from 'gulp-sourcemaps';
 import bulk from 'gulp-sass-bulk-importer';
 import concat from 'gulp-concat';
+import minifyCss from 'gulp-minify-css';
 
 
 
@@ -62,9 +63,13 @@ export const scss = () => {
                 cleanCss()
             )
         )
-        //.pipe(rename({ extname: '.min.css' }))
-
         .pipe(concat('style.min.css'))
+        .pipe(
+            app.plugins.if(
+                app.isBuild,
+                minifyCss({keepSpecialComments : 0})
+            )
+        )
         .pipe(map.write('../sourcemaps/'))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browsersync.stream());
