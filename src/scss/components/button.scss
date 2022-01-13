@@ -1,0 +1,22 @@
+.btn{
+    display: inline-block;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    width: auto;
+    cursor: pointer;
+    color:black;
+}
+
+    .btn-frame{
+        border: 2px solid #ddd;
+    }
+    
+    .btn-red{
+        background-color: #f44336;
+    }
+    
+    .btn-blue{
+        background-color: #337ab7;
+        color: white;
+    }

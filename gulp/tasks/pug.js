@@ -14,7 +14,7 @@ export const pug = () => {
             verbose: true   // консольложить файл
         })) 
         .pipe(app.plugins.replace(/@img\//g, 'img/'))
-        .pipe(webpHtmlNosvg())
+        //.pipe(webpHtmlNosvg())
         .pipe(versionNumber({
             'value': '%DT%',
             'append': {

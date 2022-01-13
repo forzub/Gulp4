@@ -1,0 +1,40 @@
+//- mixin tabs(obj)
+include ./card-loop
+include ./cardSlider
+include ../service/constans-index
+    
+each item in catalogValue
+    h2 #{item.title} 
+    p #{item.description}
+    
+    .row.gy-3.tabs
+        .tab-nav-bx(id=item.sect_id)
+            ul.nav.nav-tabs
+                each tab, index in item.tabs    
+                    li.nav-item
+                        - let className = '';
+                        - let link = `#${tab.id}`;
+                        - if(!index) className = 'active'
+                            a.nav-link(class=className aria-current="page" data-bs-toggle='tab' href=link) #{tab.title}
+                    
+        
+        .tab-content
+            each tab, index in item.tabs
+                - let className = '';
+                - if(!index) className = 'active'
+                    .tab-pane.tab-panel1(class=className id=tab.id)
+                        .tab_swiper-container
+                            .tabs-row.gy-4.swiper-wrapper 
+
+                                each card in tab.cards 
+                                    +card(card,true)
+                                        +card_slider(card.pic)
+                        .swiper-button-prev
+                        .swiper-button-next     
+                        .row.tabs-btn-bx 
+                            button.tabs-btn.btn.btn-red(type='default') #{tab.buttext}
+                
+                        
+                                
+
+    

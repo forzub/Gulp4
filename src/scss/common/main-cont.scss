@@ -1,0 +1,33 @@
+.head-cat-nav{
+    margin-bottom: 20px;
+    
+}
+
+.tab-nav-bx{
+    margin-bottom: 15px;
+}
+
+.bots-test-slide{
+    width: 100%;
+    border:1px solid #ccc;
+}
+
+.tab-panel2{
+    overflow: hidden;
+    position: relative;
+}
+
+.dopservice_unit{
+    width: 100%;
+    padding-top: 100%;
+    border:1px solid #ccc;
+    position: relative;
+}
+
+.dopservice_unit span{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+}

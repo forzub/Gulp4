@@ -1,0 +1,229 @@
+.card-itm{
+    min-width: 0;
+    max-width: 300px;
+    margin: 0 auto;
+    border:1px solid #ccc;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+
+.card-info-bx{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.card-info{
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.green{ background-color: greenyellow; }
+.havexp{ background-color: orange; }
+.cool{ background-color: maroon; color:#fff}
+.for_hike{ background-color: gold; }
+.mount{ background-color: blueviolet; }
+.for_win{ background-color: gray; }
+.forest{ background-color: green; color:#fff}
+.sea{ background-color: cadetblue; }
+
+
+.card-slider,.card-ti, .card-list-bx, .card-cost{ border-bottom: 1px solid #ccc; }
+.card-param{border-top: 1px solid #ccc;}
+.card-ti,.card-list,.card-param{padding: 20px 20px;}
+.card-ti{
+    font-size: 0.8rem;
+    color:#ccc;
+    height: 78px;
+}
+.card-dev{
+    color:initial;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-list-bx {
+    position: relative;
+    height: 166px;
+    z-index: 0;
+}
+
+.card-list{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.7s, bottom 0.7s;
+    overflow: hidden;   
+    z-index: 3;
+}
+
+
+
+.card-list:hover{
+    top:-78px;
+    bottom: -112px;
+}
+
+.card-list::after, .card-list::before{
+    top: 0;
+    left: 0;
+    content: ""; 
+    display:block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: opacity .7s;
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+}
+.card-list::before{
+    background: linear-gradient(180deg, #eeeeee 0%, #ffffff 100%);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.card-list:hover::after{
+    opacity: 0;
+}
+
+.card-li{
+    list-style: disc;
+    margin-left: 15px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    position: relative;
+    z-index: 3;
+}
+
+.card-btn-bx{
+    padding: 10px 0;
+    justify-content: space-around;
+    display: flex;
+    height: 62px;
+}
+
+
+.card-cost{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0;
+    height: 50px;
+}
+
+.card-param-bx{
+    height: 100px;
+    position: relative;
+    z-index: 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.card-param{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: top 0.7s;
+    background-color: #fff;
+}
+
+.card-param:hover{
+    top: -63px;
+}
+
+.card-param-tx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.param-row{
+    margin: 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start
+}
+.param-col{
+    padding: 2px;
+    width: auto;
+    margin-bottom: 20px;
+    flex: 0 0 25%;
+    font-size: 0.75rem;
+}
+.card-param-itm{
+    display: flex;
+    padding: 5px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider-bx{
+padding-top: 100%;
+position: relative;
+border-radius: 15px 15px 0 0;
+
+.card-slider{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    position: absolute;
+}
+    
+.swiper-wrapper{
+    height: 100%;
+}
+
+.swiper-img-bx{
+    text-align: center;
+    height: 100%;
+}
+
+
+.swiper-img-bx img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.card-slide-pagination{
+    top:auto;
+    bottom: -5px;
+    text-align: center;
+}
+
+.card-slide-pagination{
+    top: auto;
+text-align: center;
+position: relative;
+display: flex;
+width: 100%;
+justify-content: center;
+transform: none;
+bottom: 18px;
+z-index: 10;
+background: #fff;
+left: 0;
+}
+
+.swiper-pagination-bullet{
+    margin: 5px!important;
+}
+
+}   
+
+}

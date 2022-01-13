@@ -1,0 +1,8 @@
+mixin card_slider(img_arr)
+    .swiper-wrapper 
+        each path in img_arr
+            .swiper-slide 
+                .swiper-img-bx 
+                    img.swiper-lazy(data-src=path, src='@img/1x1.jpg')
+                    .swiper-lazy-preloader
+    

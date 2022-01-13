@@ -1,2 +1,44 @@
 header.header
-    
+    .container.breakpoints
+        nav.head-nav
+            ul.head-nav-ul
+                each itm in ['О компании', 'Прайс-лист', 'Условия проката', 'Услуги', 'FAQ', 'Купить снаряжение']
+                    li.head-nav-li  
+                        a.head-nav-link(href='#') #{itm}
+        
+        .head-info 
+            .head-logo 
+                a.head-logo-link(href='/')
+                    img(width='300', height='80' )
+                .head-logo-tx Магазин-прокат спортивного <br> инвентаря - «Морской стиль»
+            .head-ti 
+                .head-ti-tx Прокат и продажа товаров для активного отдыха зимой и летом
+                .head-ps 
+                    span 15 лет на рынке
+                    a.head-ps-link(href='#') 6 филиалов
+            .head-contact 
+                .head-con-open Ежедневно: с 10-00 до 21-00
+                .head-con-phone 
+                    a.head-con-phone-link(href='tel:73433465013') + 7 (343) 346-50-13
+                    a.head-con-phone-link(href='tel:73432026220') + 7 (343) 202-6-220
+                .head-con-bt-bx 
+                    buttom(type='button') Связаться с директором
+
+        .head-cat-nav.row 
+            .col-md-10.hcat-nav
+                .hcat-ti Каталог оборудования
+                nav.hcat-nav-bx
+                    ul.hcat-ul
+                        each itm in ['Лыжи', 'Коньки', 'Санки', 'Пленки', 'Газеты', 'Школьники']
+                            li.hcat-nav-li  
+                                a.hcat-nav-link(href='#') #{itm} 
+            .col-md-2.hcat-switch 
+                .hcat-switch-bx 
+                    label.switch
+                        input(type="checkbox")
+                        span.slider.round
+                        .hcat-switch-tx 
+                            span Лето 
+                            span Зима
+
+

@@ -1,0 +1,510 @@
+- characters1 = ["Прогиб : рокер","Форма : Directional","Конструкция : Сендвич","Уровень катания : Прогрессирующий","Сердечник : Комбинированный","Назначение : Карвинг/универсальные","900 руб/сутки",]
+- characters2 = ["Прогиб : рокер","Форма : Directional","Конструкция : Сендвич","900 руб/сутки",]
+- characters3 = ["Прогиб : рокер","Форма : Directional","Конструкция : Сендвич","Уровень катания : Прогрессирующий","Сердечник : Комбинированный","Прогиб : рокер","Форма : Directional","Назначение : Карвинг/универсальные","Конструкция : Сендвич","Форма : Directional","Конструкция : Сендвич","900 руб/сутки",]
+- charact_tent1 = ["Назначение - туристическое","Тип каркаса - внешний","Геометрия - не стандартная","Водонепроницаемость - низкая","Ветроустойчивость - низкая","Вес, кг 0,94","Размер 120 х 170 х 105 см","Одноместная"]
+- charact_tent2 = ["Назначение - туристическое","Размер 120 х 170 х 105 см","Одноместная"]
+- charact_tent3 = ["Назначение - туристическое","Тип каркаса - внешний","Назначение - туристическое","Размер 120 х 170 х 105 см","Геометрия - не стандартная","Назначение - туристическое","Размер 120 х 170 х 105 см","Одноместная","Водонепроницаемость - низкая","Назначение - туристическое","Размер 120 х 170 х 105 см","Одноместная", "Ветроустойчивость - низкая","Вес, кг 0,94","Размер 120 х 170 х 105 см","Одноместная"]
+-
+    let catalogValue = [
+        {
+            title: 'Прокат зимнего инвентаря',
+            description: "Все для разнообразного активного отдыха этой зимой. Покоряйте любые вершины Урала всесте с нами! Уктус и Белуха уже вас заждались ;)",
+            sect_id: 'winter',
+            tabs : [
+                    {
+                        title: 'Горные лыжи (с палками и ботнками)',
+                        id:'win_sky',
+                        buttext : 'Смотреть весь каталог лыж',
+                        butref: '#',
+                        cards: [
+                                {
+                                title : 'Горные лыжи - 1',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'green', text:'Еще зеленый' }],
+                                pic: ['@img/sky1.jpg','@img/sky2.jpg','@img/sky3.jpg','@img/sky4.jpg','@img/sky1.jpg','@img/sky6.jpg',],
+                                characteristic: characters1 ,
+                                price: 900,
+                                param: true,
+                                size: ['110 см','220 см','330 см','440 см',] 
+                                },
+                                {
+                                title : 'Горные лыжи - 2',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'havexp', text:'Есть опыт' }],
+                                pic: ['@img/sky5.jpg','@img/sky4.jpg','@img/sky3.jpg','@img/sky1.jpg','@img/sky2.jpg','@img/sky6.jpg',],
+                                characteristic: characters2,
+                                price: 900,
+                                param: true,
+                                size: ['110 см','220 см','330 см','440 см',] 
+                                },
+                                {
+                                title : 'Горные лыжи - 3',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'cool', text:'Уже крут' }],
+                                pic: ['@img/sky3.jpg','@img/sky1.jpg','@img/sky3.jpg','@img/sky4.jpg','@img/sky5.jpg','@img/sky6.jpg',],
+                                characteristic: characters3,
+                                price: 900,
+                                param: true,
+                                size: ['110 см','220 см','330 см','440 см',
+                                ] 
+                                },{
+                                title : 'Горные лыжи - 4',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'cool', text:'Уже крут' }],
+                                pic: ['@img/sky5.jpg','@img/sky3.jpg','@img/sky2.jpg','@img/sky1.jpg','@img/sky4.jpg','@img/sky6.jpg',],
+                                characteristic: characters2,
+                                price: 900,
+                                param: true,
+                                size: ['110 см','220 см','330 см','440 см',] 
+                                },{
+                                title : 'Горные лыжи - 5',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'cool', text:'Уже крут' }],
+                                pic: ['@img/sky2.jpg','@img/sky1.jpg','@img/sky6.jpg','@img/sky4.jpg','@img/sky3.jpg','@img/sky5.jpg',],
+                                characteristic: characters2,
+                                price: 900,
+                                param: true,
+                                size: ['110 см','220 см','330 см','440 см',] 
+                                }
+                            ]
+                    },      
+                        {
+                        title: 'Сноуборды (комплект с ботнками)',
+                        id:'win_snowbord',
+                        buttext : 'Смотреть весь каталог сноубордов',
+                        butref: '#',
+                        cards: [
+                                {
+                                title : 'Сноуборд - 1',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'cool', text:'Уже крут' }],
+                                pic: ['@img/snow1.jpg','@img/snow2.jpg','@img/snow3.jpg',],
+                                characteristic: characters1,
+                                price: 1900,param: true,
+                                size: ['110 см','220 см',] 
+                                },{
+                                title : 'Сноуборд - 2',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'havexp', text:'Есть опыт' }],
+                                pic: ['@img/snow3.jpg','@img/snow2.jpg','@img/snow1.jpg',],
+                                characteristic: characters3,
+                                price: 1900,param: true,
+                                size: ['110 см','220 см',] 
+                                },
+                                {
+                                title : 'Сноуборд - 3',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'havexp', text:'Есть опыт' }],
+                                pic: ['@img/snow2.jpg','@img/snow1.jpg','@img/snow3.jpg',],
+                                characteristic: characters2,
+                                price: 1900,param: true,
+                                size: ['110 см','220 см',] 
+                                },
+                                {
+                                title : 'Сноуборд - 4',
+                                name: 'Elan ELEMENT',
+                                experience: [{class: 'havexp', text:'Есть опыт' }],
+                                pic: ['@img/snow3.jpg','@img/snow2.jpg','@img/snow1.jpg',],
+                                characteristic: characters3,
+                                price: 1900,param: true,
+                                size: ['110 см','220 см',] 
+                                },
+                            ]
+                    },
+                    {
+                        title: 'Коньки',
+                        id:'win_skates',
+                        buttext : 'Смотреть весь каталог Коньков',
+                        butref: '#',
+                        cards: [
+                                {
+                                    title : 'Коньки-1',
+                                    name: 'Elan ELEMENT',
+                                    experience: [{class: 'havexp', text:'Есть опыт' }],
+                                    pic: ['@img/kon1.jpg','@img/kon2.jpg','@img/kon3.jpg','@img/kon4.jpg',],
+                                    characteristic: characters3,
+                                    price: 1900,param: true,
+                                    size: ['43','44','45','46','47',] 
+                                },
+                                {
+                                    title : 'Коньки-2',
+                                    name: 'Elan ELEMENT',
+                                    experience: [{class: 'cool', text:'Уже крут' }],
+                                    pic: ['@img/kon3.jpg','@img/kon1.jpg','@img/kon3.jpg','@img/kon4.jpg',],
+                                    characteristic: characters2,
+                                    price: 1900,param: true,
+                                    size: ['43','44','45','46','47',] 
+                                },
+                        ] 
+                    },
+                    {
+                        title: 'Тюбинги',
+                        id:'win_tubing',
+                        buttext : 'Смотреть весь каталог Тюбингов',
+                        butref: '#',
+                        cards: [{
+                            title : 'Тюбинги',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'havexp', text:'Есть опыт' }],
+                            pic: ['@img/tub1.jpg','@img/tub2.jpg','@img/tub3.jpg',],
+                            characteristic: characters1,
+                            price: 1900,param: true,
+                            size: ['43','44','45','46','47',] 
+                        }]
+                    }
+                ]
+            },
+        {
+            title: 'Прокат летнего туристического оборудования',
+            description: "Мы подбрали для вас Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam impedit ex corrupti, vitae non eveniet consequatur sed voluptas fuga ut.", 
+            sect_id: 'tour',
+            tabs : [
+                {
+                    title: 'Туристические палатки',
+                    id:'tents',
+                    buttext : 'Смотреть весь каталог палаток',
+                    butref: '#',
+                    cards: [{
+                            title : 'Туристическая палатка -1',
+                            name: 'TENT&C',
+                            experience: [{class: 'for_hike', text: 'для похода'},{class: 'sea', text: 'на море'},{ class: 'mount', text: 'в горы'}],
+                            pic: ['@img/tent1.jpg','@img/tent2.jpg','@img/tent3.jpg','@img/tent4.jpg','@img/tent5.jpg'],
+                            characteristic: charact_tent1,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                            {
+                            title : 'Туристическая палатка -2',
+                            name: 'TENT&C',
+                            experience: [{class: 'for_win', text: 'для зимы'}],
+                            pic: ['@img/tent5.jpg','@img/tent6.jpg','@img/tent7.jpg',],
+                            characteristic: charact_tent1,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                            {
+                            title : 'Туристическая палатка -3',
+                            name: 'TENT&C',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/tent3.jpg','@img/tent4.jpg','@img/tent5.jpg','@img/tent6.jpg','@img/tent7.jpg',],
+                            characteristic: charact_tent1,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                            {
+                            title : 'Туристическая палатка -4',
+                            name: 'TENT&C',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'sea', text: 'на море'}],
+                            pic: ['@img/tent4.jpg','@img/tent5.jpg','@img/tent6.jpg','@img/tent7.jpg',],
+                            characteristic: charact_tent1,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },{
+                            title : 'Туристическая палатка -5',
+                            name: 'TENT&C',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/tent6.jpg','@img/tent5.jpg','@img/tent6.jpg','@img/tent7.jpg',],
+                            characteristic: charact_tent1,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                        ]
+                },
+                {
+                    title: 'Походные рюкзаки',
+                    id: 'bags',
+                    buttext : 'Смотреть весь каталог рюкзаков',
+                    butref: '#',
+                    cards: [
+                        {
+                        title : 'Рюкзак',
+                        name: 'Elan ELEMENT',
+                        experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                        pic: ['@img/ruc1.jpg','@img/ruc2.jpg','@img/ruc3.jpg'],
+                        characteristic: charact_tent2,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },{
+                        title : 'Рюкзак',
+                        name: 'Elan ELEMENT',
+                        experience: [],
+                        pic: ['@img/ruc2.jpg','@img/ruc3.jpg'],
+                        characteristic: charact_tent2,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },
+                        {
+                        title : 'Рюкзак',
+                        name: 'Elan ELEMENT',
+                        experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                        pic: ['@img/ruc3.jpg','@img/ruc2.jpg'],
+                        characteristic: charact_tent2,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },
+                    ]
+                },
+                {
+                    title: 'Спальники',
+                    id: 'spalnik',
+                    buttext : 'Смотреть весь каталог спальников',
+                    butref: '#',
+                    cards: [{
+                            title : 'Спальник',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/spa1.jpg','@img/spa2.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                            {
+                            title : 'Спальник',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'}],
+                            pic: ['@img/spa2.jpg','@img/spa1.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                    ]
+                },
+                {
+                    title: 'Тенты',
+                    id:'rain_tent',
+                    buttext : 'Смотреть весь каталог тентов',
+                    butref: '#',
+                    cards: [
+                            {
+                            title : 'Туристический тент',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/ten1.jpg','@img/ten2.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },    {
+                            title : 'Туристический тент',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/ten2.jpg','@img/ten1.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                            {
+                            title : 'Туристический тент',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/ten1.jpg','@img/ten2.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },    {
+                            title : 'Туристический тент',
+                            name: 'Elan ELEMENT',
+                            experience: [{class: 'for_hike', text: 'для похода'},{ class: 'forest', text: 'в лес'}],
+                            pic: ['@img/ten2.jpg','@img/ten1.jpg'],
+                            characteristic: charact_tent3,
+                            price: 900,
+                            param: false,
+                            size:[]
+                            },
+                    ]
+                },
+                {
+                    title: 'Котелки',
+                    id: 'kotelok',
+                    buttext : 'Смотреть весь каталог котелков',
+                    butref: '#',
+                    cards: [
+                        {
+                        title : 'Туристическаий котелок',
+                        name: 'Elan ELEMENT',
+                        experience: [{class: 'for_hike', text: 'для похода'}],
+                        pic: ['@img/cot1.jpg','@img/cot2.jpg'],
+                        characteristic: characters3,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },{
+                        title : 'Туристическаий котелок',
+                        name: 'Elan ELEMENT',
+                        experience: [{class: 'for_hike', text: 'для похода'}],
+                        pic: ['@img/cot2.jpg','@img/cot1.jpg'],
+                        characteristic: characters3,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },{
+                        title : 'Туристическаий котелок',
+                        name: 'Elan ELEMENT',
+                        experience: [{class: 'for_hike', text: 'для похода'}],
+                        pic: ['@img/cot1.jpg','@img/cot2.jpg'],
+                        characteristic: characters3,
+                        price: 900,
+                        param: false,
+                        size:[]
+                        },
+                    ]
+                }, 
+            ]
+        },
+        {
+            title: 'Сезонный прокат велосипедов, роликов и скейтов',
+            description: "Мы знаем, как наши постоянные клиенты обожают летний сезон, ведь это отличная возможность взять в прокат велосипед и отправиться на встречу приключениям. В этом сезоне мы обновили коллекцию специально для вас!", 
+            sect_id: 'transport',
+            tabs : [
+                {
+                    title: 'Горные велосипеды',
+                    id: 'velo',
+                    buttext : 'Смотреть весь каталог горных велосипедов',
+                    butref: '#',
+                    cards: [{
+                            title : 'Горный велосипед',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel1.jpg','@img/vel2.jpg','@img/vel3.jpg','@img/vel4.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150','150-175','165-175'] 
+                            },{
+                            title : 'Горный велосипед',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'havexp', text:'Есть опыт' }],
+                            pic: ['@img/vel2.jpg','@img/vel3.jpg','@img/vel4.jpg'],
+                            characteristic:characters2,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','140-150','150-175','165-175'] 
+                            },{
+                            title : 'Горный велосипед',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'havexp', text:'Есть опыт' }],
+                            pic: ['@img/vel3.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },
+                    ]
+                }, 
+                {
+                    title: 'Городской велосипеды',
+                    id: 'gor_velo',
+                    buttext : 'Смотреть весь каталог городских велосипедов',
+                    butref: '#',
+                    cards: [{
+                            title : 'Городской велосипед',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel4.jpg','@img/vel2.jpg','@img/vel3.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },{
+                            title : 'Городской велосипед',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel2.jpg','@img/vel3.jpg','@img/vel4.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },]
+                        }, 
+                {
+                    title: 'Для девушек',
+                    id: 'girls_velo',
+                    buttext : 'Смотреть весь каталог велосипедов для девушек',
+                    butref: '#',
+                    cards: [
+                        {
+                            title : 'Для девушек',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel3.jpg','@img/vel2.jpg','@img/vel3.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },{
+                            title : 'Для девушек',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel4.jpg','@img/vel3.jpg','@img/vel4.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },{
+                            title : 'Для девушек',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/vel1.jpg','@img/vel2.jpg','@img/vel3.jpg'],
+                            characteristic:characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },
+                            
+                    ]
+                }, 
+                {
+                    title: 'Ролики',
+                    id: 'rols',
+                    buttext : 'Смотреть весь каталог роликов',
+                    butref: '#',
+                    cards: [{
+                            title : 'Ролики - 1',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/rol1.jpg','@img/rol2.jpg'],
+                            characteristic: characters3,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },{
+                            title : 'Ролики - 2',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/rol2.jpg','@img/rol1.jpg'],
+                            characteristic: characters3,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150',] 
+                            },
+                    ]
+                }, 
+                {
+                    title: 'Скейты',
+                    id: 'scates',
+                    buttext : 'Смотреть весь каталог скейтов',
+                    butref: '#',
+                    cards: [{
+                            title : 'Скейт',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/scat1.jpg','@img/scat2.jpg'],
+                            characteristic: characters1,
+                            price: 900, param: true,                    
+                            size: ['150-175','165-175','130-160','140-150',] 
+                        },{
+                            title : 'Скейт',
+                            name: 'Stern Dynamic 2.0 26"',
+                            experience: [{class: 'green', text:'Еще зеленый' }],
+                            pic: ['@img/scat2.jpg','@img/scat1.jpg'],
+                            characteristic: characters1,
+                            price: 900, param: true,
+                            size: ['150-175','165-175','130-160','140-150','150-175','165-175'] 
+                        },
+                        ]
+                }, 
+            ]
+        },
+    ];

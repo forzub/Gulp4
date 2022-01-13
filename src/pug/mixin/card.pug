@@ -1,0 +1,34 @@
+mixin card(obj)
+    .swiper-slide 
+        .card-itm
+            .slider-bx
+                .card-slider
+                    block
+                    .card-slide-pagination
+            .card-ti #{obj.titul}
+                .card-dev Elan ELEMENT
+            ul.card-list 
+                li.card-li "Прогиб : рокер",
+                li.card-li "Форма : Directional",
+                li.card-li "Конструкция : Сендвич",
+                li.card-li "Уровень катания : Прогрессирующий",
+                li.card-li "Сердечник : Комбинированный",
+                li.card-li "Назначение : Карвинг/универсальные",
+                li.card-li "900 руб/сутки"
+            .card-cost 900 руб./ сутки
+            .card-btn-bx 
+                buttom.btn.card-btn.btn-frame Подробнее
+                buttom.btn.card-btn.btn-blue Забронировать
+            
+            if obj.param
+                .card-param 
+                    .card-param-tx Доступные размеры
+                    .row.param-row    
+                        .col-3.param-col 
+                            .card-param-itm 110 cм
+                        .col-3.param-col 
+                            .card-param-itm 220 cм
+                        .col-3.param-col 
+                            .card-param-itm 330 cм
+                        .col-3.param-col 
+                            .card-param-itm 440 cм

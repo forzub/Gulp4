@@ -1,0 +1,39 @@
+.main-slide-itm{
+    border:1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-slider{
+    overflow:hidden;
+}
+
+.main-banner-itm{
+    border:1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.main-slide-ti, img.main-slide-img {
+    width: 100%;
+}
+
+.main-slide-ti{position: relative;}
+.main-btn{
+    padding: 10px 20px;
+    border:none;
+    border-radius: 8px;
+    background: mediumorchid;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20%;
+}
+
+.main-banner-itm{
+    padding: 7px;
+    width: 100%;
+}

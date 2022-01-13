@@ -1,0 +1,123 @@
+.header{
+
+    nav.head-nav {
+        padding-left: 16.66%;
+    }
+
+    .head-nav-ul{
+        display: flex;
+    }
+
+    li.head-nav-li{
+        padding: 5px 15px;
+        display: flex;
+    }
+
+    li.head-nav-li+li.head-nav-li{border-left: 1px solid black;}
+
+    a.head-nav-link{
+        text-decoration: none;
+        color:black
+    }
+
+    .head-info{display: flex;}
+
+    .head-logo{
+        flex: 0 0 16.66%
+    }
+    .head-logo-link img{max-width: 100%;}
+
+    .head-logo-tx{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+
+    .head-ti{
+        flex:0 0 66%;
+        
+    }
+    .head-ti-tx,.head-ps{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .head-contact{
+        flex: 0 0 16.66%;
+    }
+
+    a.head-con-phone-link {
+        display: flex;
+        color:black;
+    }
+
+    .head-con-bt-bx {
+        display: flex;
+        padding: 10px 20px;
+        background: cornflowerblue;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+
+    
+    
+    
+    
+    .hcat-nav{display: flex;}
+    .hcat-ti {
+        display: flex;
+        flex: 0 0 25%;
+        padding: 10px 20px;
+        background: cornflowerblue;
+        color: #fff;
+    }
+    
+    nav.hcat-nav-bx {
+        display: flex;
+        align-items: center;
+    }
+
+    .hcat-ul{
+        display: flex;
+    }
+
+    li.hcat-nav-li {
+        padding: 5px 15px;
+    }
+    li.hcat-nav-li+li.hcat-nav-li{border-left: 1px solid #000;}
+
+    a.hcat-nav-link{color: #000;}
+
+    .hcat-switch-bx{
+        flex: 0 0 16.66%;
+        position: relative;
+    }
+
+    .switch{ 
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .hcat-switch-tx{
+        position: absolute;
+        top: 0;
+        left: -140px;
+        display: flex;
+    }
+
+    .hcat-switch-tx span{
+        display: flex;
+        padding: 5px 5px;
+    }
+    .hcat-switch-tx span:first-child{
+        border-right: 1px solid black;
+    }
+
+    input:checked + span + .hcat-switch-tx span + span{font-weight: bold;}
+    input:checked + span + .hcat-switch-tx span{font-weight: normal;}
+    input + span + .hcat-switch-tx span + span{font-weight: normal;}
+    input + span + .hcat-switch-tx span{font-weight: bold;}
+
+}

@@ -1,6 +1,119 @@
 extends ./common/base
+
+include ./mixin/card
+include ./mixin/cardSlider
+//- include ./mixin/tab
+
 block vars 
-    - var siteTitle = 'main';
+    - let siteTitle = 'main';
 
 block content
-    h1 hellow
+    section.section-tilte 
+        .container.breakpoints 
+            .row.gy-3
+                .col-md-3
+                    .main-banner-bx 
+                        .main-banner-itm 
+                            img.main-slide-img(src='@img/mainban1.svg')
+                        .main-banner-itm
+                            img.main-slide-img(src='@img/mainban1.svg')  
+                        .main-banner-itm  
+                            img.main-slide-img(src='@img/mainban1.svg')
+
+                .col-md-9 
+                    #main-slider 
+                         .swiper-wrapper
+                            .swiper-slide.main-slide-itm
+                                .main-slide-ti 
+                                    img.main-slide-img(src='@img/main1.svg')
+                                    button.main-btn(type='button') Арендовать оборудование
+                            .swiper-slide.main-slide-itm
+                                .main-slide-ti
+                                    img.main-slide-img(src='@img/main1.svg')
+                                    button.main-btn(type='button') Арендовать оборудование
+                            .swiper-slide.main-slide-itm
+                                .main-slide-ti 
+                                    img.main-slide-img(src='@img/main1.svg')
+                                    button.main-btn(type='button') Арендовать оборудование
+
+
+    secton.section-catalog 
+        .container.breakpoints 
+
+            include ./mixin/tab
+
+            h2 Прокат катамаранов К-2, К-4, К-6, К-8, а также ПВХ-лодки, моторы, спасжилеты
+            p.
+                Мы подобрали для вас лучшие решения для сплава в жаркий сезон,<br> 
+                а также все необходимое для любителей рыбалки зимой и летом.<br> 
+                Для деток готовы предложить современные и надежные спасательные жилеты.
+            
+            - item_tabs = [{ title: 'Катамаран', id:'tab41'},{ title: 'ПВХ-лодки', id:'tab42'},{ title: 'Спасательные жилеты', id:'tab43'},{ title: 'Моторы для лодок', id:'tab44'},] 
+            .tab-nav-bx(id='boats')
+                ul.nav.nav-tabs
+                    each tab, index in item_tabs   
+                        li.nav-item
+                            - let className = '';
+                            - let link = `#${tab.id}`;
+                            - if(!index) className = 'active'
+                                a.nav-link(class=className aria-current="page" data-bs-toggle='tab' href=link) #{tab.title}
+
+            .tab-content
+                each tab, index in item_tabs
+                    - let className = '';
+                    - if(!index) className = 'active'
+                        .tab-pane.tab-panel2(class=className id=tab.id)
+                            .tab_swiper-container
+                                .tabs-row.gy-4.swiper-wrapper
+                                    .bots-test-slide.swiper-slide
+                                        img.main-slide-img(src='@img/mainban1.svg')
+                                        .bots-tx slide1
+                                    .bots-test-slide.swiper-slide
+                                        img.main-slide-img(src='@img/mainban1.svg')
+                                        .bots-tx slide2
+                                    .bots-test-slide.swiper-slide
+                                        img.main-slide-img(src='@img/mainban1.svg')
+                                        .bots-tx slide3
+                                    .bots-test-slide.swiper-slide
+                                        img.main-slide-img(src='@img/mainban1.svg')
+                                        .bots-tx slide4
+                            .swiper-button-prev
+                            .swiper-button-next
+    
+
+    section.section-dopservice 
+        .container.breakpoints  
+            .row.gy-3 
+                .col 
+                    h1 А еще у нас для вас есть
+                    p.
+                     Мы предпочитаем осваивать новые горизонты, поэтому не стоим на месте  и рады
+                     предоставить своим любимым клиентам смежные услуги проката
+            .row.gy-3
+                .col-md-6 
+                    .dopservice_unit 
+                        span dopservice 1
+                .col-md-6 
+                    .dopservice_unit 
+                        span dopservice 2
+    
+    section.section-about 
+        .container.breakpoints  
+            .row.gy-3 
+                .col 
+                    h1 О компании, давайте знакомиться?
+            .row.gy-3
+                .col 
+                    .block блок о компании
+    
+    section.section-map 
+        .container.breakpoints  
+            .row.gy-3 
+                .col 
+                    h1 
+                         span Где нас найти
+                         a(href="#") | Куда поехать кататься?
+            .row.gy-3
+                .col 
+                    .block блок карты
+    

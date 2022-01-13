@@ -1,0 +1,31 @@
+mixin card(obj, param)
+    .swiper-slide 
+        .card-itm
+            .card-info-bx
+                each info in obj.experience
+                    .card-info(class=info.class) #{info.text} 
+            .slider-bx
+                .card-slider
+                    block
+                    .card-slide-pagination
+            .card-ti #{obj.title}
+                .card-dev #{obj.name}
+
+            .card-list-bx
+                ul.card-list
+                    each caract in obj.characteristic 
+                        li.card-li #{caract}
+                
+            .card-cost 900 руб./ сутки
+            .card-btn-bx 
+                buttom.btn.card-btn.btn-frame Подробнее
+                buttom.btn.card-btn.btn-blue Забронировать
+            
+            if obj.param
+                .card-param-bx
+                    .card-param 
+                        .card-param-tx Доступные размеры
+                        .row.param-row 
+                                each sizex in obj.size
+                                    .param-col 
+                                        .card-param-itm #{sizex}
