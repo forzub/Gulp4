@@ -17,3 +17,6 @@ Emmet - https://medium.com/@sexy_frontend/%D0...
 Генератор CSS-анимаций - https://animista.net/
 Генератор CSS border-radius - https://developer.mozilla.org/ru/docs...
 Слепая печать - https://www.edclub.com/typingclub
+
+"Чертоги Фрилансера"
+https://template.fls.guru/template-docs/dlya-chego-nuzhny-chertogi-frilansera-v3-prezentaciya-shablona-i-ego-vozmozhnostej.html
