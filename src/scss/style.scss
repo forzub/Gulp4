@@ -1,0 +1,32 @@
+@import "fonts";
+
+body {
+  background-color: pink;
+  font-family: "Roboto";
+
+  span {
+    color: red;
+    // transform: rotate(360deg);
+    background-image: url("@img/1.jpg");
+
+    display: block;
+
+    @media(max-width:760px) {
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+
+
+@media(max-width:760px) {
+  body {
+    font-size: 20px;
+    opacity: .5;
+    box-sizing: border-box;
+    transform: scale(.5);
+    display: flex;
+  }
+}
